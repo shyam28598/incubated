@@ -1,0 +1,582 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/TransitManagement/schema.json",
+  "title": "Smart Data models -TransitManagement schema",
+  "modelTags": "",
+  "description": "A public transit system Data Model.",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "trip_delay": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. This can be positive and negative in seconds and shows how much the vehicle deviates from the planned one."
+        },
+        "standing_capacity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Describes the passenger standing capacity of the vehicle corresponding to this observation."
+        },
+        "speed": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Gives the Speed of the vehicle."
+        },
+        "seating_capacity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Describes the passenger seating capacity of the vehicle corresponding to this observation."
+        },
+        "travelDistance": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The distance between the orgin bus stop and the destination bus stop or the total distance travelled corresponding to this observation."
+        },
+        "bearing": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Gives the vehicle GPS angle measured in a clockwise direction from the True North."
+        },
+        "vehicleType": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Describes the type of vehicle corresponding to this observation could be BRT mini bus, BRT bus, city bus in case of ITMS vehicles,"
+        },
+        "route_url": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Contains the URL of a web page about that particular route and is different from the agency_url."
+        },
+        "agency_lang": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted)."
+        },
+        "depot_name": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Describes the depot name of the bus depot corresponding to this observation."
+        },
+        "agency_fare_url": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online."
+        },
+        "agency_id": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. ID that uniquely identifies a transit agency. A transit feed may represent data from more than one agency. The agency_id is dataset unique. This field is optional for transit feeds that only contain data for a single agency."
+        },
+        "route_type": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Number indicating the type of transport- 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes."
+        },
+        "entity_id": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Feed unique ID for the entity coressponding to this observation"
+        },
+        "stop_desc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. This field contains a description of a stop."
+        },
+        "route_long_name": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Full name of a route. This name is more descriptive than the routeShortName and often includes the route's destination or stop. This mostly includes the to and from destination names of the route."
+        },
+        "agency_timezone": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Timezone field contains the timezone where the transit agency is located."
+        },
+        "stop_code": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. This field contains short text or a number that uniquely identifies the stop for passengers. Can be same as stop_id if it is for public."
+        },
+        "agency_name": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The agency_name field contains the full name of the transit agency."
+        },
+        "route_desc": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Description of the route. This can include the entire route details including to and from destination and timing information in a text description form."
+        },
+        "route_color": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. If assigned, this field defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF)."
+        },
+        "route_text_color": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. This field can be used to specify a legible color to use for text drawn against a background of route_color. The color must be provided as a six-character hexadecimal number, for example, FFD700. If no color is specified, the default text color is black (000000)."
+        },
+        "ac_available": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Describes the presence of air conditioning option in the vehicle corresponding to this observation."
+        },
+        "tripDirection": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Gives the direction in which the vehicle is travelling in ENUM[UP,DN]"
+        },
+        "agency_url": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The agency_url field contains the URL of the transit agency."
+        },
+        "routeStopSequence": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Gives the stop IDs/stop codes or station IDs/station codes in the right sequence for the route or line corresponding to this observation."
+        },
+        "trip_direction": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Gives the direction in which the vehicle is travelling."
+        },
+        "last_stop_id": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Stop ID/Stop name of the previous bus stop corresponding to the bus in this observation."
+        },
+        "route_short_name": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Short name of a route. This will often be the transit vehicle's board name like \"402D\", or \"Green\" that riders use to identify a route."
+        },
+        "stop_name": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Describes the name of the Bus Stop."
+        },
+        "depot_id": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Describes the unique id of the bus depot corresponding to this observation."
+        },
+        "stop_url": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. This field contains the URL of a web page about a particular stop and is different from the agency_url and the route_url fields."
+        },
+        "travelTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. The time taken to travel between the orgin bus stop and the destination bus stop corresponding to this observation in HH:MM:SS format(HH:MM:SS is also accepted, if the hour begins with 0)."
+        },
+        "actual_trip_end_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. This field specifies the time at which service or trip corresponding to this observation is scheduled to end."
+        },
+        "actual_trip_start_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. This field specifies the time at which service actually began."
+        },
+        "last_tracked_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Gives the time at which the vehicle was last tracked."
+        },
+        "last_stop_arrival_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Specifies the arrival time at the previous stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (H:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results."
+        },
+        "observationDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Last reported time of observation."
+        },
+        "trip_details": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text.A descriptor of realtime update on the schedule of a vehicle along a trip.",
+          "properties": {
+            "stop_headsign": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. This field contains the text that appears on a sign that identifies the trip’s destination to passengers."
+            },
+            "arrival_time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text'. Specifies the arrival time at a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results."
+            },
+            "departure_time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text'. Specifies the departure time from a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results."
+            },
+            "stop_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Stop ID/Stop name of the bus stops corresponding to the bus in this observation."
+            },
+            "stop_sequence": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Indicates the stop sequencel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed stop_times.txt."
+            }
+          }
+        },
+        "stop_sequence_detail": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text.Describes the stop sequence for a trip in the designated route made by the public transit vehicle.",
+          "properties": {
+            "stop_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Stop ID/Stop name of the bus stops corresponding to the bus in this observation."
+            },
+            "stop_sequence": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Indicates the stop sequencel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed stop_times.txt."
+            }
+          }
+        },
+        "stop_time_update": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text.Describes the stop sequence for a trip in the designated route made by the public transit vehicle.",
+          "properties": {
+            "schedule_relationship": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Describes if the Route/Trip has been scheduled."
+            },
+            "stop_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Stop ID/Stop name of the bus stops corresponding to the bus in this observation."
+            },
+            "stop_sequence": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Indicates the stop sequencel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed stop_times.txt."
+            },
+            "arrival": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate.",
+              "properties": {
+                "uncertainity": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0."
+                }
+              }
+            },
+            "departure": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate.",
+              "properties": {
+                "uncertainity": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0."
+                }
+              }
+            }
+          }
+        },
+        "trip_update": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. Describes the trip information like delay, departures, etc., for a trip made by the vehicle corresponding to this observation.",
+          "properties": {
+            "stop_time_update": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate.",
+              "properties": {
+                "schedule_relationship": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes if the Route/Trip has been scheduled."
+                },
+                "stop_id": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Stop ID/Stop name of the bus stops corresponding to the bus in this observation."
+                },
+                "stop_sequence": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. Indicates the stop sequencel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed stop_times.txt."
+                },
+                "arrival": {
+                  "type": "object",
+                  "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate.",
+                  "properties": {
+                    "uncertainity": {
+                      "type": "number",
+                      "description": "Property. Model:'https://schema.org/Number'. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0."
+                    }
+                  }
+                },
+                "departure": {
+                  "type": "object",
+                  "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate.",
+                  "properties": {
+                    "uncertainity": {
+                      "type": "number",
+                      "description": "Property. Model:'https://schema.org/Number'. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0."
+                    }
+                  }
+                }
+              }
+            },
+            "vehicleDesc": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. Describes the additional information of the vehicle corresponding to this observation.",
+              "properties": {
+                "vehicle_id": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification."
+                },
+                "vehicle_label": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle."
+                },
+                "license_plate": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. Gives the License Plate number of the vehice."
+                }
+              }
+            },
+            "trip": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. Describes the trip the vehicle corresponding to this observation is making.",
+              "properties": {
+                "schedule_relationship": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes if the Route/Trip has been scheduled"
+                },
+                "route_id": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on."
+                },
+                "start_date": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes the initial scheduled date of the trip corresponding to the vehicle this observation. An example format for this field - YYYYMMDD."
+                },
+                "direction_id": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt."
+                },
+                "trip_id": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. Trip ID/Trip name alloted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId."
+                },
+                "start_time": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes the initial scheduled start time of the trip corresponding to the vehicle this observation. An example format for this field - 11:15:35 or 25:15:35."
+                }
+              }
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text. Last reported time of observation from the vehicle."
+            }
+          }
+        },
+        "arrival": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate.",
+          "properties": {
+            "uncertainity": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0."
+            }
+          }
+        },
+        "departure": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate",
+          "properties": {
+            "uncertainity": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. If uncertainty is omitted, it is interpreted as unknown. To specify a completely certain prediction, set its uncertainty to 0."
+            }
+          }
+        },
+        "vehicleDesc": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. Describes the additional information of the vehicle corresponding to this observation.",
+          "properties": {
+            "vehicle_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification."
+            },
+            "license_plate": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Gives the License Plate number of the vehice."
+            },
+            "vehicle_label": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle."
+            }
+          }
+        },
+        "tripDetails": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text.A descriptor of realtime update on the schedule of a vehicle along a trip.",
+          "properties": {
+            "stop_headsign": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. This field contains the text that appears on a sign that identifies the trip’s destination to passengers."
+            },
+            "arrival_time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text'. Specifies the arrival time at a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results."
+            },
+            "departure_time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text'. Specifies the departure time from a specific stop for a specific trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that span multiple dates will have stop times greater than 24:00:00. For example, if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00 would not produce the desired results."
+            },
+            "stop_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Stop ID/Stop name of the bus stops corresponding to the bus in this observation."
+            },
+            "stop_sequence": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Indicates the stop sequencel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed stop_times.txt."
+            }
+          }
+        },
+        "vehicle_position": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. Describes the realtime position of the vehicle corresponding to this observation.",
+          "properties": {
+            "current_status": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text. Describes the status of the vehicle w.r.t the stop corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]."
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text. Last reported time of observation from the vehicle."
+            },
+            "vehicleDesc": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. Describes the additional information of the vehicle corresponding to this observation.",
+              "properties": {
+                "vehicle_id": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification."
+                },
+                "license_plate": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Gives the License Plate number of the vehice."
+                },
+                "vehicle_label": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle."
+                }
+              }
+            },
+            "current_stop_sequence": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Gives the stop sequence index of the current stop. This is determined by considering current_status, if current_status is missing IN_TRANSIT_TO is assumed."
+            },
+            "stop_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text. Stop ID/Stop name of the bus stops corresponding to the bus in this observation."
+            },
+            "trip": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text. Describes the trip the vehicle corresponding to this observation is making.",
+              "properties": {
+                "schedule_relationship": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes if the Route/Trip has been scheduled"
+                },
+                "route_id": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on."
+                },
+                "start_date": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes the initial scheduled date of the trip corresponding to the vehicle this observation. An example format for this field - YYYYMMDD."
+                },
+                "direction_id": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt."
+                },
+                "trip_id": {
+                  "type": "number",
+                  "description": "Property. Model:'https://schema.org/Number'. Trip ID/Trip name alloted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId."
+                },
+                "start_time": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Property. Model:'https://schema.org/Text'. Describes the initial scheduled start time of the trip corresponding to the vehicle this observation. An example format for this field - 11:15:35 or 25:15:35."
+                }
+              }
+            }
+          }
+        },
+        "trip": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. Describes the trip the vehicle corresponding to this observation is making.",
+          "properties": {
+            "schedule_relationship": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Describes if the Route/Trip has been scheduled"
+            },
+            "route_id": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on."
+            },
+            "start_date": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Describes the initial scheduled date of the trip corresponding to the vehicle this observation. An example format for this field - YYYYMMDD."
+            },
+            "direction_id": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt."
+            },
+            "trip_id": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Trip ID/Trip name alloted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId."
+            },
+            "start_time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/Text'. Describes the initial scheduled start time of the trip corresponding to the vehicle this observation. An example format for this field - 11:15:35 or 25:15:35."
+            }
+          }
+        },
+        "deviceInfo": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. Information about the device associated with the observations.",
+          "properties": {
+            "rfID": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Gives the ID of the RFID reader."
+            },
+            "deviceBatteryStatus": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Gives the Battery charging status of the reporting device(Connected, Disconnected)."
+            },
+            "deviceName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Device Name or Station name of the sensor device/station corresponding to this observation."
+            },
+            "deviceID": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Device ID of the physical sensor/ measurement station corresponding to this observation."
+            },
+            "measurand": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Property/properties sensed/observed/measured by the device."
+            },
+            "deviceSimNumber": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Gives the sim number of the device in the waste management vehicle."
+            },
+            "deviceModel": {
+              "type": "object",
+              "description": "Property. Model:'https://schema.org/Text'. Describes the information of the device, sensor or system in consideration.",
+              "properties": {
+                "brandName": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Name of the brand associated with an entity, e.g., sensor, device etc."
+                },
+                "manufacturerName": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Name of the manufacturer associated with an entity, e.g., sensor, device etc."
+                },
+                "modelName": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. Name of a specific model associated with an entity, e.g., sensor, device etc."
+                },
+                "modelURL": {
+                  "type": "string",
+                  "description": "Property. Model:'https://schema.org/Text'. URL providing further information of a specific model associated with an entity, e.g., sensor, device etc."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

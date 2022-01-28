@@ -1,0 +1,151 @@
+{
+    "id": "https://smart-data-models.github.io/dataModel.Transportation/TransitManagement/schema.json",
+    "@context": "iudx:TransitManagement",
+    "type": ["TransitManagement"],
+	"trip_delay": 5,
+    "standing_capacity": 15,
+    "speed": 20,
+    "seating_capacity": 45,
+    "travelDistance": 25,
+    "bearing": 60,
+    "vehicleType": "BRT mini bus",
+    "route_url": "https://developers.google.com/transit/gtfs-realtime/reference#fields_6",
+    "agency_lang": "EN",
+    "depot_name": "JP Nagar",
+    "agency_fare_url": "https://developers.google.com/transit/gtfs-realtime",
+    "agency_id": "2B12",
+    "route_type": "3",
+    "entity_id": "11",
+    "stop_desc": "JP Nagar Bus Stop",
+    "route_long_name": "JP Nagar Bus Stop",
+    "agency_timezone": "IST",
+    "stop_code": "213",
+    "agency_name": "BRT",
+    "route_desc": "Koramangala, Majestic, JP Nagar",
+    "route_color": "Blue",
+    "route_text_color": "Yellow",
+    "ac_available": "Yes",
+    "tripDirection": "UP",
+    "agency_url": "https://developers.google.com/transit/gtfs-realtime",
+    "routeStopSequence" :"213,214,215,216",
+    "trip_direction": "UP",
+    "last_stop_id": "216",
+    "route_short_name": "JPN",
+    "stop_name": "JP Nagar Bus Stop",
+    "depot_id": "17",
+    "stop_url": "https://developers.google.com/transit/gtfs-realtime",
+    "travelTime": "15:51:02+05:30",
+    "actual_trip_end_time": "18:51:02+05:30",
+    "actual_trip_start_time": "14:51:02+05:30",
+    "last_tracked_time": "17:51:02+05:30",
+    "last_stop_arrival_time": "17:51:02+05:30",
+    "observationDateTime": "2021-01-11T15:51:02+05:30",
+    "trip_details":{
+        "stop_headsign": "JPN",
+        "arrival_time": "17:51:02+05:30",
+        "departure_time": "17:50:02+05:30",
+        "stop_id": "213",
+        "stop_sequence": 213
+    },
+    "stop_sequence_detail":{
+        "stop_id":"213",
+        "stop_sequence":213
+    },
+    "stop_time_update":{
+        "schedule_relationship": "Scheduled",
+        "stop_id":"213",
+        "stop_sequence":213,
+        "arrival":{
+            "uncertainity": 5
+        },
+        "departure":{
+            "uncertainity": 2
+        }
+    },
+    "trip_update":{
+        "stop_time_update":{
+            "schedule_relationship": "Scheduled",
+            "stop_id":"213",
+            "stop_sequence":213,
+            "arrival":{
+                "uncertainity": 5
+            },
+            "departure":{
+                "uncertainity": 2
+            }
+        },
+        "vehicleDesc": {
+            "vehicle_id": "24",
+            "vehicle_label": "21B",
+            "license_plate": "KA052167"
+        },
+        "trip":{
+            "schedule_relationship": "Scheduled",
+            "route_id":"21B",
+            "start_date":"20210514",
+            "direction_id": "UP",
+            "trip_id": "2",
+            "start_time": "14:50:02+05:30"
+        },
+        "timestamp": "17:50:02+05:30"
+    },
+    "arrival":{
+        "uncertainity":6
+    },
+    "departure":{
+        "uncertainity":2
+    },
+    "vehicleDesc": {
+        "vehicle_id": "24",
+        "vehicle_label": "21B",
+        "license_plate": "KA052167"
+    },
+    "tripDetails":{
+        "stop_headsign": "JPN",
+        "arrival_time": "17:51:02+05:30",
+        "departure_time": "17:50:02+05:30",
+        "stop_id": "213",
+        "stop_sequence": 213
+    },
+    "vehicle_position": {
+        "current_status": "IN_TRANSIT",
+        "timestamp":"17:50:02+05:30",
+        "vehicleDesc": {
+            "vehicle_id": "24",
+            "vehicle_label": "21B",
+            "license_plate": "KA052167"
+        },
+        "current_stop_sequence": 213,
+        "stop_id": "213",
+        "trip":{
+            "schedule_relationship": "Scheduled",
+            "route_id":"21B",
+            "start_date":"20210514",
+            "direction_id": "UP",
+            "trip_id": "2",
+            "start_time": "14:50:02+05:30"
+        }
+    },
+    "trip":{
+        "schedule_relationship": "Scheduled",
+        "route_id":"21B",
+        "start_date":"20210514",
+        "direction_id": "UP",
+        "trip_id": "2",
+        "start_time": "14:50:02+05:30"
+    },
+    "deviceInfo":{
+        "rfID":"564",
+        "deviceBatteryStatus":"Connected",
+        "deviceName":"SL2",
+        "deviceID":"41",
+        "measurand":"5",
+        "deviceSimNumber":"6755231334",
+        "deviceModel":{
+            "brandName":"abc",
+            "manufacturerName":"xyz",
+            "modelName":"SL1",
+            "modelURL":"www.abcstreetlight.com"
+        }
+      }
+}
